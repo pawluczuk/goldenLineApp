@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongo = require('mongoskin');
 
+var db = mongo.db("mongodb://web:webuser@ds053310.mongolab.com:53310/heroku_app32091043", {native_parser:true});
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -21,6 +23,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// make our db accesible to our router
+app.use(function(req, res, next) {
+    req.db = db;
+    next();
+});
 
 app.use('/', routes);
 app.use('/users', users);

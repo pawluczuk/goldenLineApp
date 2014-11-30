@@ -6,3 +6,37 @@ block content
 			div(class="row")
 				div(class="col-lg-12 text-center")
 					h2 Kategorie
+			div(class="row")
+				div(class="panel panel-default")
+					div(class="panel-heading")
+						h3(class="panel-title") Wyszukaj
+					div(class="panel-body")
+						div(class="form-group")
+							label(for="mainCategory") Wybierz kategorie główne:
+							select(id="mainCategory" placeholder="Kategorie główne...")
+						div(class="form-group")
+							label(for="subcategory") Wybierz podkategorie:
+							select(id="subcategory" placeholder="Podkategorie...")
+						div(class="form-group")
+							label(for="networkParameter") Parametr sieciowy:
+							select(id="networkParameter" placeholder="Parametr sieciowy...")
+
+			div(class="row")
+				div(class="panel panel-default")
+					div(class="panel-heading")
+						h3(class="panel-title") Wyniki
+					table(class="table table-hover")
+						thead
+							tr
+								th #
+								th Hyperlink
+								th Network Parameter
+								th Location
+						tr
+							td 1
+							td www.google.pl
+							td 0.1
+							td Warszawa
+block scripts
+	script(src='/javascripts/selectize.js')
+	script(src='/javascripts/categories.js')

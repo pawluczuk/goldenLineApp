@@ -18,4 +18,16 @@ router.get('/categories', function(req, res) {
   res.render('categories', { title: 'Kategorie' });
 });
 
+router.get('/connectionTest', function(req, res) {
+	var db = req.db;
+	db.collection('categories').find()
+		.toArray(function (err, items) {
+			if (err) {
+	            console.log(err);
+	            return;
+	        }
+			res.json(items);
+		});
+});
+
 module.exports = router;
