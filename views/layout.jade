@@ -1,7 +1,27 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+		title= title
+		//link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/stylish-portfolio.css')
+	body
+		a(id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle")
+			span(class="glyphicon glyphicon-align-justify" aria-hidden="true")
+		nav(id="sidebar-wrapper")
+			ul(class="sidebar-nav")
+				a(id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle")
+					span(class="glyphicon glyphicon-remove" aria-hidden="true")
+				li(class="sidebar-brand")
+					a(href="/") Start
+				li(class="sidebar-brand")
+					a(href="/categories") Kategorie
+				li(class="sidebar-brand")
+					a(href="/info") O projekcie
+				li(class="sidebar-brand")
+					a(href="/contact") Kontakt
+		block content
+	script(src='/javascripts/jquery.js')
+	script(src='/javascripts/bootstrap.min.js')
+	script(src='/javascripts/script.js')

@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	header(id="top" class="header")
+		div(class="text-vertical-center")
+			h1=title
+			h3 Znajduj profile GoldenLine łatwo i przyjemnie.
+			br
+			a(href="/info" class="btn btn-dark btn-lg") Dowiedz się więcej!
