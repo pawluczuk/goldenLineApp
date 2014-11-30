@@ -1,84 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '0d' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 verbose readDependencies using package.json deps
-5 verbose cache add [ '0d', null ]
-6 verbose cache add name=undefined spec="0d" args=["0d",null]
-7 verbose parsed url { protocol: null,
-7 verbose parsed url   slashes: null,
-7 verbose parsed url   auth: null,
-7 verbose parsed url   host: null,
-7 verbose parsed url   port: null,
-7 verbose parsed url   hostname: null,
-7 verbose parsed url   hash: null,
-7 verbose parsed url   search: null,
-7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: '0d',
-7 verbose parsed url   path: '0d',
-7 verbose parsed url   href: '0d' }
-8 silly lockFile dbf0a51f-0d 0d
-9 verbose lock 0d /Users/monika/.npm/dbf0a51f-0d.lock
-10 silly lockFile dbf0a51f-0d 0d
-11 silly lockFile dbf0a51f-0d 0d
-12 verbose addNamed [ '0d', '' ]
-13 verbose addNamed [ null, '*' ]
-14 silly lockFile 8918650d-0d 0d@
-15 verbose lock 0d@ /Users/monika/.npm/8918650d-0d.lock
-16 silly addNameRange { name: '0d', range: '*', hasData: false }
-17 verbose request where is /0d
-18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 5856faee56583b3d
-20 verbose url raw /0d
-21 verbose url resolving [ 'https://registry.npmjs.org/', './0d' ]
-22 verbose url resolved https://registry.npmjs.org/0d
-23 verbose request where is https://registry.npmjs.org/0d
-24 info trying registry request attempt 1 at 20:38:02
-25 http GET https://registry.npmjs.org/0d
-26 http 404 https://registry.npmjs.org/0d
-27 verbose headers { date: 'Sun, 30 Nov 2014 19:38:03 GMT',
-27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 verbose headers   'content-type': 'application/json',
-27 verbose headers   'cache-control': 'max-age=0',
-27 verbose headers   'content-length': '52',
-27 verbose headers   'accept-ranges': 'bytes',
-27 verbose headers   via: '1.1 varnish',
-27 verbose headers   age: '0',
-27 verbose headers   'x-served-by': 'cache-fra1224-FRA',
-27 verbose headers   'x-cache': 'MISS',
-27 verbose headers   'x-cache-hits': '0',
-27 verbose headers   'x-timer': 'S1417376283.272203,VS0,VE431',
-27 verbose headers   'keep-alive': 'timeout=10, max=50',
-27 verbose headers   connection: 'Keep-Alive' }
-28 silly registry.get cb [ 404,
-28 silly registry.get   { date: 'Sun, 30 Nov 2014 19:38:03 GMT',
-28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-28 silly registry.get     'content-type': 'application/json',
-28 silly registry.get     'cache-control': 'max-age=0',
-28 silly registry.get     'content-length': '52',
-28 silly registry.get     'accept-ranges': 'bytes',
-28 silly registry.get     via: '1.1 varnish',
-28 silly registry.get     age: '0',
-28 silly registry.get     'x-served-by': 'cache-fra1224-FRA',
-28 silly registry.get     'x-cache': 'MISS',
-28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1417376283.272203,VS0,VE431',
-28 silly registry.get     'keep-alive': 'timeout=10, max=50',
-28 silly registry.get     connection: 'Keep-Alive' } ]
-29 silly lockFile 8918650d-0d 0d@
-30 silly lockFile 8918650d-0d 0d@
-31 error 404 404 Not Found: 0d
-31 error 404
-31 error 404 '0d' is not in the npm registry.
-31 error 404 You should bug the author to publish it
-31 error 404 It was specified as a dependency of 'goldenLineApp'
-31 error 404
-31 error 404 Note that you can also install from a
-31 error 404 tarball, folder, or http url, or git url.
-32 error System Darwin 14.0.0
-33 error command "node" "/usr/local/bin/npm" "install" "0d"
-34 error cwd /Users/monika/Desktop/goldenLineApp
-35 error node -v v0.10.32
-36 error npm -v 1.4.28
-37 error code E404
-38 verbose exit [ 1, true ]
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart goldenLineApp@0.0.0
+6 info start goldenLineApp@0.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info goldenLineApp@0.0.0 Failed to exec start script
+9 error goldenLineApp@0.0.0 start: `node ./bin/www`
+9 error Exit status 8
+10 error Failed at the goldenLineApp@0.0.0 start script.
+10 error This is most likely a problem with the goldenLineApp package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     node ./bin/www
+10 error You can get their info via:
+10 error     npm owner ls goldenLineApp
+10 error There is likely additional logging output above.
+11 error System Darwin 14.0.0
+12 error command "node" "/usr/local/bin/npm" "start"
+13 error cwd /Users/monika/Desktop/goldenLineApp
+14 error node -v v0.10.32
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
